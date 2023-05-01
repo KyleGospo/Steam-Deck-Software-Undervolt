@@ -12,7 +12,7 @@ Once completed, run the following to apply the added udev config:
 
 The undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-tweaks.sh`
 
-By default a -5 [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied (via -set-coall) which should be stable on most hardware.
+By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall`)*, which should be stable on most hardware.
 
 ## Activation
 
