@@ -1,7 +1,7 @@
 # Steam Deck Software Undervolt
-This repository offers an easy way to undervolt a Steam Deck as safely as possible and without entering the BIOS or disabling read-only using [JamesCJ60's fork](https://github.com/JamesCJ60/RyzenAdj) of [RyzenAdj](https://github.com/FlyGoat/RyzenAdj) and systemd targets based on  [Chris Down's guide](https://chrisdown.name/2017/10/29/adding-power-related-targets-to-systemd.html). 
+This repository offers an easy way to undervolt a Steam Deck as safely as possible and without entering the BIOS or disabling read-only using [a fork](https://github.com/KyleGospo/RyzenAdj) of [RyzenAdj](https://github.com/FlyGoat/RyzenAdj) with changes from [JamesCJ60's fork](https://github.com/JamesCJ60/RyzenAdj) and patches to allow for GPU curve optimization from his [Universal x86 Tuning Utility](https://github.com/JamesCJ60/Universal-x86-Tuning-Utility), and systemd targets based on [Chris Down's guide](https://chrisdown.name/2017/10/29/adding-power-related-targets-to-systemd.html). 
 
-A precompiled version of JamesCJ60's fork is provided for your convenience.
+A precompiled version of RyzenAdj is provided for your convenience.
 
 ## Warning
 
@@ -16,7 +16,7 @@ Once completed, run the following to apply the added udev config:
 
 The undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-tweaks.sh`
 
-By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall`)*, which should be stable on most hardware.
+By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall` and `-set-cogfx`)*, which should be stable on most hardware.
 
 ## Activation
 
