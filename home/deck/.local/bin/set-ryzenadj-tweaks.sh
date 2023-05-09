@@ -9,6 +9,6 @@ set -eu
 # 0x100000 - 5 (Range: -30, 30)
 /home/deck/.local/bin/ryzenadj --set-coall=0xFFFFB
 
-# GPU
+# GPU - Not functional
 # 0x100000 - 5 (Range: -30, 30)
 #/home/deck/.local/bin/ryzenadj --set-cogfx=0xFFFFB
