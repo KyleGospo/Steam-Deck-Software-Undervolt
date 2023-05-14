@@ -1,7 +1,7 @@
 # Steam Deck Software Undervolt
-This repository offers an easy way to undervolt a Steam Deck as safely as possible and without entering the BIOS or disabling read-only using [a fork](https://github.com/KyleGospo/RyzenAdj) of [RyzenAdj](https://github.com/FlyGoat/RyzenAdj) with changes from [JamesCJ60's fork](https://github.com/JamesCJ60/RyzenAdj) and systemd targets based on [Chris Down's guide](https://chrisdown.name/2017/10/29/adding-power-related-targets-to-systemd.html). 
+This repository offers an easy way to undervolt a Steam Deck as safely as possible and without entering the BIOS or disabling read-only using [RyzenAdj](https://github.com/FlyGoat/RyzenAdj) and systemd targets based on [Chris Down's guide](https://chrisdown.name/2017/10/29/adding-power-related-targets-to-systemd.html). 
 
-A precompiled version of RyzenAdj is provided for your convenience.
+A precompiled version of RyzenAdj is provided for your convenience, built in Arch Linux from commit `f6fbf9d17f70d9736bc8294ccd8438ae94804aa9`.
 
 ## Warning
 
