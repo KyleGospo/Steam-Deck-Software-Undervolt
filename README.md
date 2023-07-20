@@ -9,7 +9,7 @@ As with any undervolt exercise caution, while this project greatly reduces the r
 
 ## Installation
 
-Inside this repository is a `home` and `etc` folder, use this as a template to add these files to the root of your Steam Deck *(You will need root to add files to the etc folder, and they will survive SteamOS updates)*.
+Inside this repository is a `home` and `etc` folder, use this as a template to add these files to the root of your Steam Deck *(You will need root to add files to the etc folder, and they will survive SteamOS updates)*. The file `allowadj.txt` must be writable by deck user and the files `on.sh` and `off.sh` must be executable by deck user.
 
 Once completed, run the following to apply the added udev config:
 `sudo udevadm control --reload-rules`
