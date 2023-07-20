@@ -9,13 +9,15 @@ allow=$(</home/deck/.local/bin/allowadj.txt)
 
 # CPU
 # 0x100000 - 22 (Range: -30, 30)
-if [[$allow = "1"]]
+if [[ $allow = "1" ]]
 then 
     # 0x100000 - 22 (Range: -30, 30)
     /home/deck/.local/bin/ryzenadj --set-coall=0xFFFED
+    echo "Undervolt on" > /home/deck/.local/bin/statusadj.txt
 else
     # 0x100000 - 0
     /home/deck/.local/bin/ryzenadj --set-coall=0x100000
+    echo "Undervolt off" > /home/deck/.local/bin/statusadj.txt
 fi
 
 # GPU - Not functional
