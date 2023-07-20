@@ -1,0 +1,5 @@
+[Path]
+PathChanged=/home/deck/.local/bin/allowadj.txt
+
+[Install]
+WantedBy=multi-user.target
