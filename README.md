@@ -19,7 +19,7 @@ The undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzena
 By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall`)*, which should be stable on most hardware.
 
 There is an experimental section where you can add unstable/unverified settings. These can be activated from game mode using the `experimental.sh` script and will not be restored later.
-There is a under volt on section where you can ad the stable/verified settings. When the service is enabled these settings will be restored upon next startup so be sure to only put
+There is an undervolt on section where you can add the stable/verified settings. When the service is enabled these settings will be restored upon next startup so be sure to only put
 '''stable''' settings here!
 
 ## Activation
