@@ -20,11 +20,12 @@ By default a `-5` [curve optimization](https://www.amd.com/system/files/document
 
 ## Activation
 
-#### Ad-hoc on and off scripts
-In order to enable the `on.sh`and `off.sh`scripts that allows you to enable and disable undervolt from game mode run the following to apply the path listener:
+#### Ad-hoc on, off, and experimental scripts
+In order to enable the `on.sh`, `off.sh`, and `experimental.sh` scripts that allows you to enable, disable and experiment with undervolt from game mode run the following to apply the path listener:
 `systemctl enable --now set-ryzenadj-tweaks.path`
 
-Having done that you can add `on.sh`and `off.sh` as non-steam apps and run them from game mode to control undervolt status. Useful to see effect of undervolt quickly.
+Having done that you can add `on.sh`, `off.sh`, and `experimental.sh` as non-steam apps and run them from game mode to control undervolt status. Useful to see effect of undervolt quickly, and expect
+with unstable settings.
 
 #### To apply the undervolt until next restart, run the following:
 `sudo systemctl start set-ryzenadj-tweaks.service`
