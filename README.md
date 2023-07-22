@@ -9,7 +9,7 @@ As with any undervolt exercise caution, while this project greatly reduces the r
 
 ## Installation
 
-Inside this repository is a `home` and `etc` folder, use this as a template to add these files to the root of your Steam Deck *(You will need root to add files to the etc folder, and they will survive SteamOS updates)*. The file `allowadj.txt` must be writable by deck user and the files `on.sh` and `off.sh` must be executable by deck user.
+Inside this repository is a `home` and `etc` folder, use this as a template to add these files to the root of your Steam Deck *(You will need root to add files to the etc folder, and they will survive SteamOS updates)*. The files `allowadj.txt` and `experimentaladj.txt` must be writable by deck user and the files `on.sh`, `off.sh`, and `experimental.sh` must be executable by deck user.
 
 Once completed, run the following to apply the added udev config:
 `sudo udevadm control --reload-rules`
@@ -17,6 +17,10 @@ Once completed, run the following to apply the added udev config:
 The undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-tweaks.sh`
 
 By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall`)*, which should be stable on most hardware.
+
+There is an experimental section where you can add unstable/unverified settings. These can be activated from game mode using the `experimental.sh` script and will not be restored later.
+There is a under volt on section where you can ad the stable/verified settings. When the service is enabled these settings will be restored upon next startup so be sure to only put
+'''stable''' settings here!
 
 ## Activation
 
