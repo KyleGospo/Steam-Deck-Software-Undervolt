@@ -28,7 +28,7 @@ There is an undervolt on section where you can add the stable/verified settings.
 In order to enable the `on.sh`, `off.sh`, and `experimental.sh` scripts that allows you to enable, disable and experiment with undervolt from game mode run the following to apply the path listener:
 `systemctl enable --now set-ryzenadj-tweaks.path`
 
-Having done that you can add `on.sh`, `off.sh`, and `experimental.sh` as non-steam apps and run them from game mode to control undervolt status. Useful to see effect of undervolt quickly, and expect
+Having done that you can add `on.sh`, `off.sh`, and `experimental.sh` as non-steam apps and run them from game mode to control undervolt status. Useful to see effect of undervolt quickly, and experiment
 with unstable settings.
 
 #### To apply the undervolt until next restart, run the following:
