@@ -25,8 +25,8 @@ By deault no undervolt is applied until you run either the `on.sh` or the `exper
 
 #### The on, off, and experimental scripts
 Add `on.sh`, `off.sh`, and `experimental.sh` from the `/home/deck/.local/bin` folder as non-steam apps and run them from game mode to control undervolt status.
-* `on.sh`enables undervolt in the `undervolt-on` section.
-* `experimental.sh` enables undervolt in the `experimental` section.
+* `on.sh`enables undervolt in the `undervolt-on` section. This setting will be restored if you restart your deck unless you have run the `off.sh` script before restart.
+* `experimental.sh` enables undervolt in the `experimental` section. The experimental setting is applied only once and is not restored if you restart your steam deck.
 * `off.sh` disables undervolt.
 
 ## Uninstall
