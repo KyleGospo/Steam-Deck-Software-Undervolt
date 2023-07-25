@@ -19,6 +19,7 @@ else
         then
             echo "0" > /home/deck/.local/bin/experimentaladj.txt
 
+            # EXPERIMENTAL SECTION
             # Put experimental settings here - these
             # will never be restored at next startup
 
@@ -35,6 +36,7 @@ else
             # Fail safe to avoid repeated crashes at startup
             echo "Applying undervolt" > home/deck/.local/bin/statusadj.txt
             
+            # UNDERVOLT-ON SECTION
             # Put verified settings here.
             # WARNING: when service is enabled these will be restored
             # at next startup and can make your device unaccessible until you
@@ -53,6 +55,7 @@ else
             echo "Undervolt on" > /home/deck/.local/bin/statusadj.txt
         fi
     else
+        # UNDERVOLT-OFF SECTION
         # Put default values here so the off.sh script can disable your tweaks.
         # If you have experimental settings you forget to restore here a restart
         # of your deck will also put the values back to default
