@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -eu
 
 status=$(</home/deck/.local/bin/statusadj.txt)
@@ -9,13 +9,13 @@ experimental=$(</home/deck/.local/bin/experimentaladj.txt)
 # https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf
 # Expect your UV to be 3-5x your set curve value. IE: -5 = -15mv to -25mv
 
-if [ "$status" = "Applying undervolt" ]
+if [[ $status = "Applying undervolt" ]]
 then
     echo "WARNING: Last apply failed or still in progress - skipping"
 else  
-    if [ "$allow" = "1" ]
+    if [[ $allow = "1" ]]
     then
-        if [ "$experimental" = "1" ]
+        if [[ $experimental = "1" ]]
         then
             echo "0" > /home/deck/.local/bin/experimentaladj.txt
 
@@ -34,7 +34,7 @@ else
             echo "Experimental on" > /home/deck/.local/bin/statusadj.txt
         else
             # Fail safe to avoid repeated crashes at startup
-            echo "Applying undervolt" > home/deck/.local/bin/statusadj.txt
+            echo "Applying undervolt" > /home/deck/.local/bin/statusadj.txt
             
             # UNDERVOLT-ON SECTION
             # Put verified settings here.
