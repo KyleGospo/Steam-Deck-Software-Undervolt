@@ -8,7 +8,7 @@ A precompiled version of RyzenAdj is provided for your convenience, built in Arc
 As with any undervolt exercise caution, while this project greatly reduces the risk of bricking your deck, it does not in any way guarantee you won't damage your hardware. Use at your own risk.
 
 ## Installation
-Clone this repository, with the repository root folder as current folder make the script install.sh executeable with `chmod +x install.sh`and run it with root privileges: `sudo ./install.sh`
+Clone this repository, with the repository root folder as current folder make the script `install.sh` executeable with `chmod +x install.sh`and run it with root privileges: `sudo ./install.sh`
 
 It will install a new service `set-ryzenadj-tweaks.service`, create some additional service activation rules, and copy a bunch of files to the `/home/deck/.local/bin` folder.
 
@@ -29,3 +29,6 @@ Add `on.sh`, `off.sh`, and `experimental.sh` from the `/home/deck/.local/bin` fo
 * `experimental.sh` enables undervolt in the `experimental` section.
 * `off.sh` disables undervolt.
 
+## Uninstall
+If you don't want to undervolt anymore you can uinstall the service `set-ryzenadj-tweaks.service`, the additional service activation roles, and delete the files from `/home/deck/.local/bin` via the uinstall.sh script.
+With the repository root folder as current folder make the script `uinstall.sh` executable with `chmod +x uinstall.sh` and run it with root privileges: `sudo ./uninstall.sh`
