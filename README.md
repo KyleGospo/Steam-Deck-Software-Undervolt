@@ -8,31 +8,24 @@ A precompiled version of RyzenAdj is provided for your convenience, built in Arc
 As with any undervolt exercise caution, while this project greatly reduces the risk of bricking your deck, it does not in any way guarantee you won't damage your hardware. Use at your own risk.
 
 ## Installation
+Clone this repository, with the repository root folder as current folder make the script install.sh executeable with `chmod +x install.sh`and run it with root privileges: `sudo ./install.sh`
 
-Inside this repository is a `home` and `etc` folder, use this as a template to add these files to the root of your Steam Deck *(You will need root to add files to the etc folder, and they will survive SteamOS updates)*. The files `allowadj.txt` and `experimentaladj.txt` must be writable by deck user and the files `on.sh`, `off.sh`, and `experimental.sh` must be executable by deck user.
+It will install a new service `set-ryzenadj-tweaks.service`, create some additional service activation rules, and copy a bunch of files to the `/home/deck/.local/bin` folder.
 
-Once completed, run the following to apply the added udev config:
-`sudo udevadm control --reload-rules`
 
-The undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-tweaks.sh`
+Undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-tweaks.sh`
 
-By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall`)*, which should be stable on most hardware.
+By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall`)*, in the 'undervolt-on' section which should be stable on most hardware.
 
-There is an experimental section where you can add unstable/unverified settings. These can be activated from game mode using the `experimental.sh` script and will not be restored later.
-There is an undervolt on section where you can add the stable/verified settings. When the service is enabled these settings will be restored upon next startup so be sure to only put
-'''stable''' settings here!
+A much more ambitious `-15` curve optimization is aplied in the `experimental` setting. This setting might be stable but it might also cause a crash/hang if applied.
 
 ## Activation
 
-#### Ad-hoc on, off, and experimental scripts
-In order to enable the `on.sh`, `off.sh`, and `experimental.sh` scripts that allows you to enable, disable and experiment with undervolt from game mode run the following to apply the path listener:
-`systemctl enable --now set-ryzenadj-tweaks.path`
+By deault no undervolt is applied until you run either the `on.sh` or the `experimental.sh` scripts:
 
-Having done that you can add `on.sh`, `off.sh`, and `experimental.sh` as non-steam apps and run them from game mode to control undervolt status. Useful to see effect of undervolt quickly, and experiment
-with unstable settings.
+#### The on, off, and experimental scripts
+Add `on.sh`, `off.sh`, and `experimental.sh` from the `/home/deck/.local/bin` folder as non-steam apps and run them from game mode to control undervolt status.
+* `on.sh`enables undervolt in the `undervolt-on` section.
+* `experimental.sh` enables undervolt in the `experimental` section.
+* `off.sh` disables undervolt.
 
-#### To apply the undervolt until next restart, run the following:
-`sudo systemctl start set-ryzenadj-tweaks.service`
-
-#### Once you're happy with the undervolt and confirmed it's stable, run the following to ensure the undervolt is reapplied automatically going forward:
-`sudo systemctl enable set-ryzenadj-tweaks.service`
