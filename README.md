@@ -17,15 +17,15 @@ Undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-t
 
 By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall`)*, in the 'undervolt-on' section which should be stable on most hardware.
 
-A much more ambitious `-15` curve optimization is aplied in the `experimental` setting. This setting might be stable but it might also cause a crash/hang if applied.
+A much more ambitious `-15` curve optimization is applied in the `experimental` setting. This setting might be stable but it might also cause a crash/hang if applied.
 
 ## Activation
 
-By deault no undervolt is applied until you run either the `on.sh` or the `experimental.sh` scripts:
+By default no undervolt is applied until you run either the `on.sh` or the `experimental.sh` scripts:
 
 #### The on, off, and experimental scripts
 Add `on.sh`, `off.sh`, and `experimental.sh` from the `/home/deck/.local/bin` folder as non-steam apps and run them from game mode to control undervolt status.
-* `on.sh`enables undervolt in the `undervolt-on` section. This setting will be restored if you restart your deck unless you have run the `off.sh` script before restart.
+* `on.sh` enables undervolt in the `undervolt-on` section. This setting will be restored if you restart your deck unless you have run the `off.sh` script before restart.
 * `experimental.sh` enables undervolt in the `experimental` section. The experimental setting is applied only once and is not restored if you restart your steam deck.
 * `off.sh` disables undervolt.
 
