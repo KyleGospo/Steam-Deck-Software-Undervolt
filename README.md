@@ -30,5 +30,5 @@ Add `on.sh`, `off.sh`, and `experimental.sh` from the `/home/deck/.local/bin` fo
 * `off.sh` disables undervolt.
 
 ## Uninstall
-If you don't want to undervolt anymore you can uinstall the service `set-ryzenadj-tweaks.service`, the additional service activation roles, and delete the files from `/home/deck/.local/bin` via the uinstall.sh script.
-With the repository root folder as current folder make the script `uinstall.sh` executable with `chmod +x uinstall.sh` and run it with root privileges: `sudo ./uninstall.sh`
+If you don't want to undervolt anymore you can uninstall the service `set-ryzenadj-tweaks.service`, the additional service activation roles, and delete the files from `/home/deck/.local/bin` via the uninstall.sh script.
+With the repository root folder as current folder make the script `uninstall.sh` executable with `chmod +x uninstall.sh` and run it with root privileges: `sudo ./uninstall.sh`
