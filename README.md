@@ -17,7 +17,7 @@ Undervolt amount can be changed by editing `/home/deck/.local/bin/set-ryzenadj-t
 
 By default a `-5` [curve optimization](https://www.amd.com/system/files/documents/faq-curve-optimizer.pdf) is applied *(via `-set-coall`)*, in the 'undervolt-on' section which should be stable on most hardware.
 
-A much more ambitious `-15` curve optimization is applied in the `experimental` setting. This setting might be stable but it might also cause a crash/hang if applied.
+A much more ambitious `-15` curve optimization is applied in the `experimental` section. This setting might be stable but it might also cause a crash/hang if applied.
 
 ## Activation
 
